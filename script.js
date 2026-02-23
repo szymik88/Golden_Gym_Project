@@ -14,7 +14,7 @@ const menu = document.querySelector(".menu");
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
-  document.body.classList.toggle("menu-open");
+  // document.body.classList.toggle("menu-open");
 });
 
 // zamykanie po kliknięciu linku
