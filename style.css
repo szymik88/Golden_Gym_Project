@@ -142,6 +142,8 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--gold);
     gap: 8px;
     font-size: 18px;
     font-weight: 700
