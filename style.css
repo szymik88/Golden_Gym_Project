@@ -13,6 +13,13 @@
     scroll-behavior: smooth
 }
 
+h1, h2, h3, h4,
+.logo,
+.footer-logo,
+.gallery-overlay {
+    font-family: 'Oswald', sans-serif;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff
@@ -53,7 +60,6 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: 'Oswald', sans-serif;
     font-size: 18px;
     font-weight: 700
 }
@@ -167,7 +173,6 @@ body {
 }
 
 h1 {
-    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     line-height: 1.05;
     margin-bottom: 15px
@@ -341,7 +346,6 @@ h1 {
 }
 
 .about-text h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     line-height: 1.1;
     margin-bottom: 15px
@@ -536,7 +540,6 @@ h1 {
 }
 
 .zones-header h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     letter-spacing: 1px;
     margin-bottom: 10px
@@ -608,7 +611,6 @@ h1 {
 }
 
 .zone-content h3 {
-    font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
     font-size: 18px
 }
@@ -725,7 +727,6 @@ h1 {
 }
 
 .mission-left h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     line-height: 1.1;
     margin-bottom: 25px
@@ -758,7 +759,6 @@ h1 {
 }
 
 .mission-item h3 {
-    font-family: 'Oswald', sans-serif;
     margin-bottom: 6px;
     font-size: 16px
 }
@@ -819,7 +819,6 @@ h1 {
 }
 
 .mission-overlay h3 {
-    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     letter-spacing: 2px
 }
@@ -956,7 +955,6 @@ h1 {
 }
 
 .rules-header h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     letter-spacing: 1px
 }
@@ -1002,7 +1000,6 @@ h1 {
 }
 
 .rule-box h3 {
-    font-family: 'Oswald', sans-serif;
     color: var(--gold);
     margin-bottom: 12px;
     letter-spacing: 1px;
@@ -1100,7 +1097,6 @@ h1 {
 }
 
 .gallery-header h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px
 }
 
@@ -1151,7 +1147,6 @@ h1 {
     justify-content: center;
     align-items: center;
     color: var(--gold);
-    font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     font-size: 16px;
     background: rgba(0, 0, 0, 0.35);
@@ -1272,7 +1267,6 @@ h1 {
 }
 
 .contact-left h2 {
-    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     margin-bottom: 15px
 }
@@ -1303,7 +1297,6 @@ h1 {
 }
 
 .info-item h4 {
-    font-family: 'Oswald', sans-serif;
     margin-bottom: 3px;
     font-size: 14px
 }
@@ -1343,7 +1336,6 @@ h1 {
 }
 
 .contact-form-box h3 {
-    font-family: 'Oswald', sans-serif;
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-size: 16px
@@ -1531,7 +1523,6 @@ h1 {
 }
 
 .footer-logo {
-    font-family: 'Oswald', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 15px
