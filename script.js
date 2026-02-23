@@ -1,32 +1,37 @@
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
+// ===== SELECTORS =====
+const navbar = document.querySelector(".navbar");
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
+const menuLinks = document.querySelectorAll(".menu a");
 
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+// ===== TOGGLE MOBILE MENU =====
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   menu.classList.toggle("active");
-  // document.body.classList.toggle("menu-open");
 });
 
-// zamykanie po kliknięciu linku
-document.querySelectorAll(".menu a").forEach(link=>{
-  link.addEventListener("click",()=>{
+
+// ===== CLOSE MENU AFTER CLICK =====
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     menu.classList.remove("active");
   });
 });
 
-// navbar scroll
-window.addEventListener("scroll",()=>{
-  document.querySelector(".navbar")
-    .classList.toggle("scrolled", window.scrollY > 50);
+// ===== LOADER =====
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  // minimalny czas wyświetlania (lepsze UX)
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 500);
 });

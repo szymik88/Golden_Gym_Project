@@ -31,6 +31,75 @@ h1, h2, h3, h4,
     margin: auto;
 }
 
+/* ===== LOADER PRO ===== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity .5s ease, visibility .5s ease;
+}
+
+/* logo */
+.loader-logo{
+    width:110px;
+    animation:pulse 1.4s ease-in-out infinite;
+    position:relative;
+    z-index:2;
+}
+
+/* puls logo */
+@keyframes pulse{
+    0%{ transform:scale(.92); opacity:.65; }
+    50%{ transform:scale(1.08); opacity:1; }
+    100%{ transform:scale(.92); opacity:.65; }
+}
+
+/* złoty ring premium */
+#loader::before{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:3px solid rgba(255,212,0,.15);
+    border-top:3px solid #ffd400;
+    animation:spin 1s linear infinite;
+}
+
+/* subtelna poświata */
+#loader::after{
+    content:"";
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:radial-gradient(circle, rgba(255,212,0,.15), transparent 70%);
+    filter:blur(10px);
+    opacity:.6;
+}
+
+/* animacja obrotu */
+@keyframes spin{
+    to{ transform:rotate(360deg); }
+}
+
+/* większe ekrany */
+@media(min-width:768px){
+  .loader-logo{ width:150px; }
+  #loader::before{ width:180px; height:180px; }
+  #loader::after{ width:260px; height:260px; }
+}
+
+/* stan ukrycia */
+#loader.hidden{
+    opacity:0;
+    visibility:hidden;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #fff
@@ -324,7 +393,6 @@ h1 {
 }
 
 .about-container {
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
