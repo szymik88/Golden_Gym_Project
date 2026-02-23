@@ -1752,3 +1752,13 @@ body.menu-open{
         display:none;
     }
 }
+
+#form-status{
+  margin-top:15px;
+  font-weight:600;
+  text-align: center;
+}
+
+.success{
+  color:#ffd400;
+}

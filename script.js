@@ -35,3 +35,59 @@ window.addEventListener("load", () => {
     loader.classList.add("hidden");
   }, 500);
 });
+
+/* =========================
+   CONTACT FORM → GOOGLE SHEETS
+========================= */
+const form = document.getElementById("contact-form");
+
+if (form) {
+  const status = document.getElementById("form-status");
+  const button = form.querySelector("button");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    // zmiana przycisku
+    button.innerText = "Wysyłanie...";
+    button.disabled = true;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      goal: form.message.value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbyPbPAUhrvxv3vx9t6VFbLLxlAs29TeUiiwnX7naeP2no4DTdqMDrMS8fmJz9mIBVyX/exec", {
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(() => {
+
+      // komunikat sukcesu
+      status.innerHTML = "Wysłane ✓";
+      status.className = "success";
+
+      // czyszczenie pól
+      form.reset();
+
+      // zmiana przycisku
+      button.innerText = "Wysłano!";
+
+      setTimeout(() => {
+        button.innerText = "WYŚLIJ ZGŁOSZENIE";
+        button.disabled = false;
+        status.innerHTML = "";
+      }, 3000);
+
+    })
+    .catch(() => {
+      status.innerHTML = "Błąd wysyłania.";
+      status.className = "";
+      button.innerText = "Spróbuj ponownie";
+      button.disabled = false;
+    });
+  });
+}
