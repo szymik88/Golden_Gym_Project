@@ -13,6 +13,9 @@
     scroll-behavior: smooth;
     transition: 0.3s ease;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 h1, h2, h3, h4,
 .logo,
